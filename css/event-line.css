@@ -1,0 +1,14 @@
+body{    
+    background-color: #CCCCEB;
+}
+
+.timeLine{
+    border-color: #001122;
+    /*height: 100%;*/ height: auto;
+    width: 430px;
+    /*position: fixed;  */
+    top: 70px;
+    left: 100px;
+    border-style: none;
+    background-color: white;
+}
