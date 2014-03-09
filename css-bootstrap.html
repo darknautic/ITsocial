@@ -1,0 +1,546 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+	<meta charset="utf-8"> 
+	<title>Bootstrap, HTML, CSS Starter Kit | CSS</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Add this if you want responsive css enabled -->
+	<meta name="description" content="Twitter Bootstrap, HTML and CSS reference files.">
+  <meta name="author" content="Steve Carey - TechandStartup.com Founder">
+	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css" />  <!-- use the .min version in production because it loads faster -->
+	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-responsive.min.css" />  <!-- Add this if you want responsive css enabled  -->
+	<!-- you could also just link to the bootstrap css file on a content delivery network:
+	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="css/style.css" />  If you also create your own stylesheet you would put the link here. -->
+	<!--  Styling related to this page that is not part of Bootstrap is put in the below internal stylesheet between the style tags. This is done to make it easier to understand what custom style is included. In production this should be moved to an external stylesheet  -->
+	<style type="text/css">
+		body {
+			padding-top:60px;  /* use 40px padding when you use the navbar-fixed-top class, otherwise the fixed navbar will cover the first line. */
+		}
+		/* The adjust-anchor class is also related to the navbar-fixed-top class. It is needed when you have internal links on the page. Without it the top line of the anchored link would be hidden by the navbar. */
+		.adjust-anchor {
+			padding-top: 40px; 
+			margin-top: -40px;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- NAVBAR -->
+  <div class="navbar navbar-inverse navbar-fixed-top">  
+    <div class="navbar-inner">
+			<div class="container">
+				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="brand" href="#">Bootstrap, HTML, CSS Starter Kit</a>
+				<div class="nav-collapse collapse">
+					<ul class="nav pull-right">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="reference-html.html">HTML</a></li>
+						<li class="active"><a href="reference-css.html">CSS</a></li>
+						<!-- Dropdown Menu  -->
+						<li class="dropdown"> 
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								Bootstrap
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href='reference-navbars.html'>Navigation Bars</a></li>
+								<li><a href='reference-navs.html'>Navs and Pills</a></li>
+								<li><a href='reference-layout.html'>Layouts</a></li>
+								<li><a href='reference-text.html'>Text</a></li>			
+								<li><a href='reference-tables.html'>Tables</a></li>
+								<li><a href='reference-forms.html'>Forms</a></li>
+								<li><a href='reference-buttons.html'>Buttons</a></li>
+								<li><a href='reference-icons.html'>Icon Glyphs</a></li>
+								<li><a href='reference-images.html'>Images</a></li>		
+								<li><a href='reference-carousel.html'>Carousel</a></li>
+								<li><a href='reference-collapse.html'>Collapse</a></li>
+								<li><a href='reference-misc.html'>Misc</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div><!--/.container -->	
+    </div><!--/.navbar-inner -->
+  </div><!--/.navbar -->
+	
+	<!-- CONTENT -->
+	<div class="container">
+		<div class='row-fluid'>
+			<div class='span9 container-fluid'>
+				<div class="page-header">
+					<h1>CSS Reference <small>Checklist and Cheatsheet</small></h1>
+				</div>
+
+				<p>CSS (Cascading Style Sheets) adds the styling to your web pages, including creating the page's layout, navigation bar, colors, fonts, table and form styling, etc. It goes hand in hand with the HTML. There are a number of outstanding free and inexpensive online resources for learning CCS including <a href="http://codecademy.com">Codecademy.com</a> (free), <a href="http://lynda.com">Lynda.com</a> (subscription) and <a href="http://teamtreehouse.com">TeamTreehouse.com</a> (subscription). They are all good, and are interactive so you reinforce what you are reading. Like HTML, CSS is not difficult. You just have to learn the main concepts and practice it. So take one of these courses. After you complete the course you can use the below checklist/cheat sheet to ensure you have all the concepts down solid and use it as an ongoing reference.</p>
+
+				<p>So, what do I do with this checklist/cheat sheet?</p>
+				<ul>
+					<li>It is meant to be used after you take a CSS course. It doesn't teach new concepts, rather it reinforces the concepts you learned in a course.</li>
+					<li>Copy and paste it to your PC and use it as a reference. Put it in Excel, or Word or PDF or whatever format you like for editable reference material.</li>
+					<li>Add to it or modify it as you see fit.</li>
+					<li>Print it out and make sure you understand every concept in it. Go back to the course if you aren't clear about a concept, or use other resources. <a href="http://w3schools.com">W3Schools.com</a> is a great free reference site for all these concepts.</li>
+				</ul>
+				
+				<p>Note: this CSS Checklist/Cheat Sheet does not reference Bootstrap classes. Use it to understand the Bootstrap stylesheet classes and to customize your site's style.</p>
+
+<!--  CSS CHECKLIST/CHEAT SHEET -->
+<h2>CSS Checklist/Cheat Sheet</h2>		
+
+<div class="well">
+
+<!-- Styling Methods -->
+<h3 id="styling-methods" class="adjust-anchor">Where to put CSS styling (3 methods):</h3>
+<ol>
+	<li>External Style Sheet: This is the recommended method.</br>
+	Create a separate file. It can be named anything but must end in .css.</br>
+	Best practice to put it in a separate css directory.</br>
+	Add a link to the stylesheet in the head section of the HTML page	<code>&lt;link rel="stylesheet" type="text/css" href="css/style.css"></code></li>
+	<li>Internal Style Sheet in the head section of the HTML page.</br>
+	This is not recommended in the final product, but useful when developing web pages.</br>
+	In the head section place within &lt;style> tags <code>&lt;style type="text/css">Add your CSS here&lt;/style></code></li>
+	<li>In-line Style</br>
+	Add style directly in the HTML opening tags of an element as a style attribute</br>
+	Uses HTML syntax rather than CSS syntax.</br>
+	Generally avoid using it, but can be used to style a single unique element.</br>
+	sytnax:	<code>&lt;tag style="attribute: value"></code></br>
+	example:	<code>&lt;h1 style="text-align: center"></code></br>
+	Use semicolon with multiple attributes <code>&lt;h1 style="text-align:center; color:red"></code></li>
+</ol>
+<p>If there are multiple styles specified, the order of priority is:</p>
+<ol>
+	<li>Inline style - inside an HTML element (highest priority).</li>
+	<li>Internal style sheet - in the head section</li>
+	<li>External style sheet - this is the recommended location. If you link to multiple stylesheets, the last one has precedence.</li>
+	<li>Browser default (lowest priority) </li>
+</ol>
+<p>But If the link to the external style sheet is placed after the internal style sheet in the head section, then the external style sheet will override the internal style sheet!</p>
+
+<!-- Terminology -->
+<h3 id="terminology" class="adjust-anchor">Terminology:</h3>		
+<ul>
+	<li>Element: In an HTML document it is everything between a start and end tag (e.g., body, h1, table, div, form, p, etc.)	</li>
+	<li>Style rule: sets the style for a specified HTML element. <code>h1 {color:blue; font-size:14px;}</code></li>
+	<li>A style rule has two main parts: a selector, and one or more declarations: <code>selector {declaration;}</code></li>
+	<li>Selector: the HTML element you want to style. <code>h1</code> is the selector in the example	</li>
+	<li>Declaration: specifies how content described by the markup looks. <code>{color:blue; font-size:14px;}</code> are the declarations<br/>
+	A declaration consists of two subitems separated by a colon:</li>
+	<ul>
+		<li>Property: the style attribute you want to change. Style attributes affect how the user's computer displays text and graphics. In the example, <code>color</code> and <code>font-size</code> are the properties.</li>
+		<li>Value: is what you want the style attribute to be. In the example <code>blue</code> and <code>14px</code> are the values</li>
+	</ul>
+	<li>Id: individual elements can be given an id. You can set style specifically for that id. Uses <code>#selector</code></li>
+	<li>Class: multiple elements can be given a class. You can set the style for a class or elements. Uses <code>.selector</code></li>
+</ul>
+
+<!-- Syntax -->
+<h3 id="syntax" class="adjust-anchor">CSS Syntax:</h3>
+<ul>
+	<li>CSS Syntax applies to external and Internal Stylesheets. Inline style uses HTML syntax.</li>
+	<li>Comments: /* Comments */ </li>
+	<li>Sytnax example: <code>h1 {color:blue; font-size:14px;}</code></li>
+	<li>Curly braces { } enclose the CSS declarations.</li>
+	<li>A semicolon always follows a declaration so the browser can distinguish them. Putting a semicolon after the last declaration is optional but good to include to be consistent.</li>
+	<li>A colon separates the property and value.</li>
+	<li>To set style rules for the entire document, set them in the body element. <code>body {background-color:grey;}</code></li>
+	<li>Group selectors: To have multiple selectors use the same style, list them separated by commas in front of the declaration. <code>h1, h2, h3 {color: blue;}</code></li>
+	<li>Nest selectors: you can style a selector for a specified class. In this case paragraphs with <code>&lt;p class="blue"></code> - <code>.blue p {color:blue}</code></li>
+	<li>You can set style rules for sections of a document with the div or span elements, or the HTML5 header, nav, aside, and footer elements.</li>
+</ul>
+
+<!-- Tips/tricks -->
+<h3 id="tips-tricks" class="adjust-anchor">Tips and tricks</h3>
+<ul>
+	<li>To eliminate the extra line between &lt;p> paragraphs style the margin at 0. <code>p{ margin:0; }</code></li>
+	<li>Put two different styles on the same line (e.g., header and paragraph text) <code>&lt;h1 style="display: inline;">Header text&lt;/h1></code> <code>&lt;p style="display: inline;">regular text&lt;/p></code></li>
+	<li>To reduce the space after &lt;h1>, &lt;h2> etc: <code>h1{ margin-bottom:0px;}</code> or <code>p{margin-top: 0px;}</code></li>
+	<li>Create a blank line use <code>&lt;P></code> without the closing &lt;/p>, or <code>&lt;br/></code></li>
+</ul>
+
+<!-- Colors -->
+<h3 id="colors" class="adjust-anchor">Colors</h3>
+<ul>
+	<li>Colors are specified by: a Hexadecimal (or HEX) value like <code>#ff0000</code>, an RGB (red green blue) value like <code>rgb(255,0,0)</code>, or a color name like <code>red</code></li>
+	<li>Color Listings: <a href="http://www.w3schools.com/html/html_colors.asp">www.w3schools.com/html/html_colors.asp</a></li>
+	<li>HEX values like #000000 are actually three pairs of two digit values representing red, green and blue. You can use three digit hex numbers as shortcuts such as #000 instead of #000000.<br/>
+	Hex values: <a href="http://www.w3schools.com/html/html_colorvalues.asp">www.w3schools.com/html/html_colorvalues.asp</a></li>
+	<li>common colors: black #000000; gray #808080; maroon #800000; purple #800080; green #008000; olive #808000; navy #000080; teal #008080; silver #C0C0C0; white #FFFFFF; red #FF0000; fuchsia #FF00FF; lime #00FF00; yellow #FFFF00; blue #0000FF; Aqua #00FFFF</li>
+	<li>Color names: <a href="http://www.w3schools.com/html/html_colornames.asp">www.w3schools.com/html/html_colornames.asp</a></li>
+	<li>Color Mixer: <a href="http://www.w3schools.com/tags/ref_colormixer.asp">www.w3schools.com/tags/ref_colormixer.asp</a></li>
+	<li>You can determine the color hex value in an image with Adobe Photoshop using the eyedropper tool. </li>
+</ul>
+
+<!-- Backgrounds -->
+<h3 id="backgrounds" class="adjust-anchor">Styling Backgrounds</h3>
+<ul>
+	<li>Put the background styling in the body selector. <code>body {background-color:#f9f7f5;}</code></li>
+	<li>You can specify the color as a hex value <code>#f9f7f5</code>, an rgb value <code>rgb(249,247,245)</code>, or a name value <code>GhostWhite</code></li>
+	<li>Add a background image. By default, the image is repeated so it covers the entire element. <code>body {background-image:url('wallpaper.png');}</code></li>
+	<li>Background-Repeat horizontal: To repeat a background image only horizontally use background-repeat:repeat-x. <code>body {background-image:url('wallpaper.png'); background-repeat:repeat-x;}</code></li>
+	<li>Background-Repeat vertical: To repeat a background image only vertically use background-repeat:repeat-y. To repeat only vertically use y instead of x. <code>body {background-image:url('wallpaper.png'); background-repeat:repeat-y;}</code></li>
+	<li>Background-No-Repeat: To not repeat a background image use background-repeat:no-repeat; <code>body {background-image:url('wallpaper.png'); background-repeat:repeat-no-repeat;}</code></li>
+	<li>To fix a background image so it doesn't scroll use background-attachment:fixed. <code>body {background-image:url('wallpaper.png'); background-attachment:fixed;}</code></li>
+	<li>Background position: Default position of a background image is top left. To change that use the background-position property. <code>body {background-image:url('wallpaper.png'); background-position:right top;}</code></br>
+	The value has two parts, first left, center, or right, then top, center, or bottom.</br>
+	You can set it by x% y% with % relative to the page.</br>
+	or by xpos ypos.</li>
+	<li>The shorthand background property sets all background properties. <code>body {background:#f9f7f5 url('wallpaper.png') no-repeat right top;} </code></br>
+	The order is background-color, background-image, background-repeat, background-attachment, background-position. You can leave out one or more properties.</li>
+	<li>Change the opacity of a background image by using the opacity parameter. Note for IE8 and earlier you need to use a the filter:alpha parameter. Best to specify both. The example makes the image 50% transparent. <code>img{opacity:0.5; filter:alpha(opacity=50);}</code></li>
+</ul>
+
+<!-- Measurement Units -->
+<h3 id="measurement-units" class="adjust-anchor">Measurement Units:</h3>
+CSS properties that require size values can be given in the below measurement units varying by property.</br>
+The below are absolute lengths except % which is relative.
+<ul>
+	<li>em  -  1em is equal to the current font size. 2em means 2 times the size of the current font. </li>
+	<li>%  -  percentage</li>
+	<li>in  -  inch</li>
+	<li>cm  -  centimeter</li>
+	<li>mm  -  millimeter</li>
+	<li>ex  -  one ex is the x-height of a font (x-height is usually about half the font-size)</li>
+	<li>pt  -  point (1 pt is the same as 1/72 inch)</li>
+	<li>pc  -  pica (1 pc is the same as 12 points)</li>
+	<li>px  -  pixels (a dot on the computer screen). Default font-size on browsers is 16px, so 1em=16px.</li>
+</ul></section>
+
+<!-- Text -->
+<h3 id="text" class="adjust-anchor">Styling Text</h3><ul>
+	<li>Color: Set text color using the color property. You can use hex, rgb or name values <code>body {color:blue;}</code> or <code>h1 {color:#00ff00;}</code> or <code>h2 {color:rgb(255,0,0);}</code></li>
+	<li>Text-align: Default is left, but can be changed to center, right or justify (spread evenly across the page): <code>h1 {text-align:center;} </code> or <code>h1 {text-align:right;}</code> or <code>h1 {text-align:justify;}</code></li>
+	<li>Remove underline from hyperlinks using text-decoration:none on the anchor tag. <code>a {text-decoration:none;}</code></li>
+	<li>Use text-decoration for underline, line-through, or overline text <code>h1 {text-decoration:underline;}</code> or <code>h1 {text-decoration:line-through;}</code> or <code>h1 {text-decoration:overline;}</code></li>
+	<li>Text-indent: indent the first line of a paragraph <code>p {text-indent:50px;}</code></li>
+	<li>Line-height: set the line height within a paragraph. Default in most browsers is 110 to 120%. <code>body{line-height:100%;}</code></li>
+	<li>Double-space your text<code>body{line-height:200%;}</code></li>
+	<li>Vertical-align: Align images within a line of text. Default is to align at the bottom of the line. You can change it to middle or top: <code>img {vertical-align:text-top;}</code></li>
+</ul>
+
+<h4>Styling Font</h4>
+<p>CSS font properties define the font family, size, boldness and style of text.</p>
+
+<h5>font-family</h5>
+<ul>
+	<li>List of commonly used font combinations: <a href="http://www.w3schools.com/cssref/css_websafe_fonts.asp">www.w3schools.com/cssref/css_websafe_fonts.asp</a></li>
+	<li>There are two types of font family names: generic family (e.g., sans-serif) and font family (a specific font family like Arial)</li>
+	<li>Generic font families are font families with a similar look such as serif, sans-serif, comic, and monospace.</li>
+	<li>Difference Between Serif and Sans-serif Fonts - Serif font has tails on the ends of letters. San-serif does not. On computer screens, sans-serif fonts are considered easier to read than serif fonts.</li>
+	<li>Monospace: All monospace characters have the same width.</li>
+	<li>The font-family property should hold several font names as a "fallback" system. If the browser does not support the first font, it tries the next font.</li>
+	<li>Start with the font you want, and end with a generic family, to let the browser pick a similar font in the generic family, if no other fonts are available.</li>
+	<li>Separate the fonts with a comma.</li>
+	<li>Put quotes around font families that are more than one word <code>p{font-family:"Times New Roman", Times, serif;}</code></li>
+	<li>Sans-serif font family example <code>p{font-family:Verdana, Geneva, sans-serif}</code></li>
+</ul>
+
+<h5>Font-size</h5>
+<ul>
+	<li>The default font size is 16 pixels for regular text</li>
+	<li>You can set the font size in absolute terms by specifying the size in pixels (px), points (pt), or inches (in). <code>h1 {font-size:40px;}</code> or <code>h1{font-size:20pt;}</code> or <code>h1{font-size:.3in;}</code></li>
+	<li>Or set it in relative terms using em or %. 1em equals the browser's default font size so 1em for regular text is 16 pixels. 1em is the same as 100%. 1.2em is the same as 120%. <code>h1 {font-size:1.2em;}</code> or <code>h1{font-size:120%;}</code></li>
+	<li>Using relative size em makes a site more responsive in adapting between computer screens and mobile devices and is therefore the recommended measuring unit. <code>p{font-size:1.1em;}</code></li>
+	<li>Formula to convert from pixel to em: px/16=em</li>
+</ul>
+
+<h5>Font-style</h5>
+<ul>
+	<li>Font-style: Make italic <code>{font-style:italic;}</code></li>
+	<li>Font-variant: convert text to small caps <code>{font-variant:small-caps;}</code></li>
+	<li>Font-weight: make the text bold, bolder, lighter, or specify using 100 to 900. <code>{font-weight:bold;}</code> or <code>{font-weight:lighter;}</code> or <code>{font-weight:500;}</code></li>
+</ul>
+
+<h5>Font shorthand</h5>
+	Font: shorthand to set all font properties in one declaration. Set each Font property in this order: font-style, font-variant, font-weight, font-size/line height, font-family. You don't have to include properties that will use the default.  The line-height property sets the space between lines. <code>{font:italic bold 1.1em Georgia,serif;}</code> or <code>{font: 12px/10px Arial;}</code>.
+
+<!-- IDs -->
+<h3 id="ids" class="adjust-anchor">IDs</h3>
+<ul>
+	<li>Use IDs when the style will be unique to one element in the HTML document.
+	<li>First create the ID in the opening HTML tag: <code>&lt;tag id="id_name"></code><br/>
+	Example: <code>&lt;div id="container1"> or &lt;p id="paragraph1"></code></li>
+	<li>Then in the CSS stylesheet, create the style rule with a hash sign <code>#</code> followed by the id name as the selector. <code>#selector{parameter:value; parameter:value;}</code><br/>
+	Example: <code>#paragraph1{text-align:center; color:blue;}</code></li>
+</ul>
+
+<!-- Classes -->
+<h3 id="classes" class="adjust-anchor">Classes</h3>
+<ul>
+	<li>Use classes when the same style will be applied to multiple elements.</li>
+	<li>First create the class in the opening HTML tag: <code>&lt;tag class="class_name"> </code><br/>
+	Example: <code>&lt;form class="standard_form"></code></li>
+	<li>Then in the CSS stylesheet, create the style rule with a period <code>.</code> followed by the class name as the selector. <code>.selector{parameter:value; parameter:value;}</code><br/>
+	Example: <code>.standard_form{margin: 10px 20px; padding: 15px 20px;}</code></li>
+	<li>To assign more than one class to an opening tag, separate the classes with a space. <code>&lt;div class="container maincontent"></code></li>
+</ul>
+
+<!-- Links -->
+<h3 id="links" class="adjust-anchor">Styling Links and pseudo classes</h3>
+<h5>Pseudo Classes</h5>
+<ul>
+	<li>Pseudo-classes add special effects to some selectors.</li>
+	<li>Pseudo class syntax (Pseudo class names are not case sensitive) <code>selector:pseudo-class {property:value;}</code></li>
+	<li><strong>Focus:</strong> used in forms to change an input box when it's clicked on. <code>input:focus { background-color:aquamarine; }</code></li>
+</ul>
+<h5>Links with Pseudo Classes</h5>
+<p>There are four states of a link. You can change their color, background-color, or remove the underline. With this pseudo class the selector is the anchor tag <code>a</code></p>
+<ol>
+	<li>a:link - normal, unvisited link. Ex: <code>a:link {color:blue;}</code> or <code>a:link {text-decoration:none;}</code> or <code>a:link {background-color:transparent;}</code></li>
+	<li>a:visited - link after the user has visited. Ex: <code>a:visited {color:darkblue;}</code> or <code>a:visited {text-decoration:none;}</code> or <code>a:visited {background-color:transparent;}</code></li>
+	<li>a:hover - a link when the user's mouse is hovering over it. Ex: <code>a:hover {color:white;}</code> or <code>a:hover {text-decoration:underline;}</code> or <code>a:hover {background-color:darkblue;}</code></li>
+	<li>a:active - a link the moment it is clicked. Ex: <code>a:active {color:azure;}</code> or <code>a:active {text-decoration:underline;}</code> or <code>a:active {background-color:blue;}</code></li>
+</ol>
+<p>Order rules: To work in all browsers, put a:active after a:hover, and a:hover after a:link and a:visited.</p>
+
+<!-- Lists -->
+<h3 id="lists" class="adjust-anchor">Styling Lists</h3>
+<ul>
+	<li>Default marker for unordered list is a bullet point. Default for an ordered list is a number. </li>
+	<li><code>list-style-type:</code> Changes the list marker</li>
+	<li>Options for unordered list besides the default disc are none, circle, or square. Ex: <code>ul {list-style-type: none;}</code> or <code>ul {list-style-type: circle;}</code></li>
+	<li>Options for ordered list besides the default decimal are lower-alpha, upper-alpha, lower-roman, upper-roman. Ex: <code>ol {list-style-type: lower-alpha;}</code> or <code>ol {list-style-type: upper-roman;}</code></li>
+	<li>To only change some lists, add an id or class to the opening tag of the list. Ex: <code>&lt;ul id="list1"></code> or <code>&lt;ol class="listtype1"></code></li>
+	<li>Then in the CSS stylesheet set the list id or class style. Ex: <code>ul#list1 {list-style-type: square;}</code> or <code>ol.listtype1 {list-style-type: lower-alpha;}</code></li>
+</ul>
+
+<!-- Tables -->
+<h3 id="tables" class="adjust-anchor">Styling Tables</h3>
+<ul>
+	<li>You can style one or more of the different table elements including table, caption, thead (table header), th (column header), tbody, tr (row), td (cell), tfooter (table footer).</li>
+	<li>Set the style for all table elements or use ids and classes to style individual tables or classes of tables.</li>
+	<li>As default there are spaces between the table cell borders. To make the borders into a solid line use: <code>table { border-collapse:collapse; }</code></li>
+	<li>Set borders. Ex: <code>table, th, td { border: 1px solid black; }</code></li>
+	<li>Table Width and Height properties. Ex: <code>table { width:100%; } th { height:20px; }</code></li>
+	<li>Text-align property sets the horizontal alignment, like left, right, or center. Ex: <code>td { text-align:right; }</code></li>
+	<li>Vertical-align property sets the vertical alignment, like top, bottom, or middle. Ex: <code>td { height:20px; vertical-align:bottom; }</code></li>
+	<li>Set padding. Ex: <code>td { padding:10px; }</code> or <code>td, th { padding:10px; }</code></li>
+	<li>Change color of borders, background and text. Ex: <code>table, td, th { border:1px solid gray; }</code> or <code>th { background-color:gray; color:white; } </code></li>
+	<li>To alternate the color of table rows add a class attribute to the opening tag of every other row. Ex: <code>&lt;tr class="colorrow"></code></li>
+	<li>Then in the CSS file create a background color for the class. Ex: <code>tr.colorrow td {background-color:LightGray}</code></li>
+	<li>Change the location of the table caption from the default of top to the bottom. <code>caption {caption-side:bottom;}</code></li>
+</ul>
+
+<!-- Box Model - Padding, Border, Margin, Outline -->
+<h3 id="box-model" class="adjust-anchor">CSS Box Model</h3>
+<ul>
+	<li>Consists of: margins, borders, padding, and content.</li>
+	<li>Content is on the inside, surrounded by the padding, then the border, then the margin. Padding, border and margin can be set to zero/none.</li>
+	<li>Total width of an element = width + left padding + right padding + left border + right border + left margin + right margin</li>
+	<li>Total height of an element =height + top padding + bottom padding + top border + bottom border + top margin + bottom margin</li>
+	<li>For margins and padding use <code>px</code> pixels rather than <code>pt</code> points or <code>em</code> because the increments are generally smaller.</li>
+</ul>
+
+<h5>Shorthand for styling individual sides of a box:</h5>
+<ul>
+	<li>To style the border, margin or padding of the sides of a box differently you can use shorthand. </li>
+	<li>List the sides as multiple values to a parameter separated by spaces. </li>
+	<li>The order is  Top, Right, Bottom, Left (clockwise).</li>
+	<li>To give each side a different style list values for all four sides. Ex: <code>{border-style:solid dashed double dotted;}</code></li>
+	<li>To give the top and bottom sides one style, and the right and left sides another style, list two values to the parameter. The first parameter is for the top and bottom, the second is for the right and left. Ex: <code>{border-style:dashed solid;}</code></li>
+	<li>To set the top one style, the bottom another style, and right/left a third style, list three styles. The second is for both right and left. Ex: <code>{border-style:solid dashed double;}</code></li>
+</ul>
+
+<h5>Styling Borders</h5>
+<ul>
+	<li>Borders can be used around tables, forms, images, paragraphs, etc.</li>
+	<li>Borders come between the margin and padding.</li>
+	<li>The default border-style is none. To show a border you must give the border-style a value.</li>
+	<li>border-style: options are solid (default), none, hidden, dotted, dashed, double, groove, ridge, inset, outset. Ex: <code>table{border-style:inset;}</code> or <code>table{border-style:dotted;}</code></li>
+	<li>border-width: default is medium (3px), other options: thin (1px), thick (5px). Ex: <code>table{border-width:2px;}</code> or <code>table{border-width:thick;}</code></li>
+	<li>border-color: use hex number, color name, or rgb number. You can also set it to transparent. Ex: <code>table{border-color:#808080;}</code> or <code>table{border-color:gray}</code></li>
+	<li>border: Or use the shorthand border property to set all three in the order of width, style then color. Listing border style is required, the other two are not. Ex: <code>table{border: 2px inset gray}</code></li>
+	<li>You can set one side using border-top, right, bottom, or left. Ex: <code>{border-top-style:none}</code> or <code>{border-right-width:5px}</code> or <code>{border-bottom: 3px double gray}</code></li>
+	<li>To give the top and bottom one style and right and left another style using shorthand. Ex: <code>{border-style:dashed solid;}</code></li>
+	<li>To give the top one style, bottom another style, and right/left a third style. Ex: <code>{border-style:solid dashed double;}</code></li>
+	<li>To give each side a different style. Ex: <code>{border-style:solid dashed double dotted;}</code></li>
+	<li>Create a border around a paragraph by assigning the paragraph tag to a class (or id if just one). Ex: <code>&lt;p class="p_border"></code><br/>
+	and in the CSS stylesheet give the class a border. Ex: <code>.p_border {border: 3px solid gray;}</code></li>
+</ul>
+
+<h5>Styling Outlines</h5><ul>
+	<li>Borders go between the padding and the margin, but outlines go outside the margin and are not part of an element's dimensions.</li>
+	<li>Styling options, rules and syntax are the same as for borders. Just replace border with outline.
+	Ex: <code>table{border: 2px inset gray}</code></li>
+</ul>
+
+<h5>Styling Margins</h5>
+<ul>
+	<li>Margin clears an area outside the border of an element. By default the margin has no background color.</li>
+	<li>The default margin value is auto which lets the browser set the margin.</li>
+	<li>Set margins to absolute widths (e.g., px) or set them as a percent of the containing element with %. Ex: <code>table{margin:10px;}</code> or <code>table{margin:10%;}</code></li>
+	<li>The margin parameter sets all sides the same width.</li>
+	<li>Set individual sides with margin-top, right, bottom, or left. Ex: <code>{margin-top: 5px; margin-bottom:10px}</code></li>
+	<li>You can overlap content with negative margins.</li>
+	<li>Use margin shorthand to set multiple sides at once<br/>
+	Set all four sides to different widths using shorthand (set clockwise). Ex: <code>{margin: 5px 5px 10px 15px;}</code><br/>
+	If you use three values, the second value sets the right and left sides. Ex: <code>{margin: 5px 15px 10px;}</code><br/>
+	If you use two values the first sets the top and bottom and the second sets right and left. Ex: <code>{margin: 5px 10px;}</code></li>
+</ul>
+
+<h5>Styling Padding</h5>
+<ul>
+	<li>Padding clears space between the element's content and the border. The padding is affected by the element's background color.</li>
+	<li>Set padding to absolute widths (e.g., px) or set it as a percent of the containing element with %. Ex: <code>table{padding:10px;}</code> or <code>table{padding-top:10%;}</code></li>
+	<li>Styling options, rules and syntax are the same as for margins. Just replace margin with padding.<br/>
+	Ex: <code>{padding-top: 5px; padding-bottom:10px}</code></li>
+</ul>
+
+<!-- Dimensions -->
+<h3 id="dimensions" class="adjust-anchor">Set dimensions - width, height</h3>
+<ul>
+	<li>You can set specific height and width of an element using length or %. Ex: <code>{width:20px;}</code> or <code>{width:50%})</code> or <code>{height:100px}</code></li>
+	<li>You can set a maximum or minimum width or height. Ex: <code>{max-width:400px}</code> or <code>{min-height:500px}</code></li>
+</ul>
+
+<!-- Images -->
+<h3 id="images" class="adjust-anchor">Images</h3>
+<ul>
+	<li>You can set the dimensions of an image directly in the image tag. Ex: <code>&lt;img src="imagefile.jpg" width="500" height="100"/></code></li>
+	<li>Or give the image an id or class <code>&lt;img src="imagefile.jpg" id="image1"/></code> or <code>&lt;img src="imagefile.jpg" class="wideimage"/></code><br/>
+	Then set the dimensions in the CSS file. Ex: <code>#image1{width:500; height:100;}</code> or <code>.wideimage{width:500; height:100;}</code></li>
+	<li>If you don't specify the image dimentions it will default to auto and use the actual dimensions of the image file.</li>
+	<li>You can specify only width or only height and the image will stretch or shrink proportionally.</li>
+</ul>
+
+<h5>Image Opacity / Transparency</h5>
+<ul>
+	<li>You can make an image partially transparent. This is often used for background images that have text on top of them.</li>
+	<li>The CSS3 syntax uses (opacity:x) where x is 0.0 to 1.0. IE8 and older use filter:alpha(opacity=yy) where yy is 1 to 100. The higher number mean less transparency. </li>
+	<li>To cover the majority of browsers use both methods.<br/>
+	Example with image 50% transparent.<code>img{opacity:0.5; filter:alpha(opacity=50);}</code></li>
+</ul>
+
+<!-- Positioning -->
+<h3 id="positioning" class="adjust-anchor">Positioning</h3>
+<ul>
+	<li>Set the position of an element using the position property (static, fixed, relative, absolute) and setting the top or bottom, right or left properties.</li>
+	<li>You can specify absolute lengths (standard is px) or as %, or leave it unspecified which defaults to auto. </li>
+	<li>Static: is the default position property and not used with the top/bottom, right/left properties.</li>
+	<li>Fixed: you can fix an element, like a background image or the top navigation bar, so that it does not scroll. Other elements ignore fixed elements and overlap them. Ex: <code>{position: fixed;top: 50px; right:20px; }</code></li>
+	<li>Relative: you can move an element from where it would normally be using relative positioning. This allows you to overlap other elements. The normal space is still reserved for the element. Ex: <code>{ position:relative; left:-10px; }</code> or <code>{ position:relative; left:10px; }</code> or <code>{ position:relative; top:-30px; }</code></li>
+	<li>Absolute: like fixed except it will scroll off the screen. Ex: <code>h1{ position:absolute; left:20px; top:30px; }</code></li>
+</ul>
+
+<h5>Overlapping Elements</h5>
+<ul>
+	<li>If using the fixed, relative, or absolute positioning causes elements to overlap, you can use the z-index property to specify which is on top (higher number is on top). Ex: <code>{position:absolute; left:0px; top:0px; z-index:1}</code></li>
+	<li>If elements overlap and a z-index is not specified, the last element in the HTML code goes on top.</li>
+	<li>1 or higher will go on top of an element without a z-index specified, and -1 or lower will go behind it.</li>
+	<li>You can use it to put text over an image.</li>
+</ul>
+
+<!-- Cursor -->
+<h3 id="cursor" class="adjust-anchor">Change the Cursor</h3>
+<ul>
+	<li>Change the cursor when the mouse is over an element using the span element and the cursor property. Ex: <code>&lt;span style="cursor:wait">Put the text, image, etc here.&lt;/span></code></li>
+	<li>Cursor styles include crosshair, pointer (hand), help (question mark), move, wait (hourglass), text, ne-resize, ne-resize, nw-resize, n-resize, s-resize, se-resize, sw-resize, w-resize, auto, default.</li>
+</ul>
+
+<!-- Overflow -->
+<h3 id="overflow" class="adjust-anchor">Overflow</h3>
+<ul>
+	<li>If text overflows an element like a box you can set it to scroll using the auto or scroll properties (auto adds a scroll bar only if needed). <code>.textbox{width:300px; height:300px; overflow:auto;}</code> or <code>#textbox1{width:300px; height:300px; overflow:scroll;} </code></li>
+	<li>You can set it to not show overflow text using hidden, or to show it beyond the box using visible. Visible is the default for overflow. Ex: <code>.textbox{width:300px; height:e00px; overflow:hidden;}</code> or <code>#textbox2{width:300px; height:300px; overflow:visible;}</code></li>
+</ul>
+
+<!-- Float -->
+<h3 id="float" class="adjust-anchor">Float</h3>
+<ul>
+	<li>Commonly used with images and layouts. Specifies if an element should float horizontally (to the left or right), letting other elements wrap around it. Not used vertically. <code>img {float: right;}</code> or <code>img{float: left;}</code></li>
+	<li>To prevent elements from flowing around an element to the right, left or both sides use the clear property. <code>{clear:left;}</code> or <code>{clear:right;}</code> or <code>{clear:both;}</code></li>
+</ul>
+
+<!-- Horizontal Alignment -->
+<h3 id="h-align" class="adjust-anchor">Horizontal Alignment</h3>
+<ul>
+	<li>Use horizontal alignment with block elements to create your page layout.</li>
+	<li>Block elements take up the full width available and have a line break before and after them. Examples of block elements are &lt;h1>, &lt;p>, &lt;div>, &lt;li></li>
+	<li>Inline elements like &lt;img>, &lt;a>, and &lt;span> only take up as much room as needed, not the whole line. </li>
+	<li>It is common to create a div with a container class for your main content area. <code>&lt;div class="container"></code></li>
+	<li>And set the width for the class in the CSS stylesheet. <code>.container {width: 940px;}</code></li>
+	<li>To avoid issues with browsers it's a good idea to set the default margin in the body to 0. <code>body{margin:0px;}</code></li>
+	<li>To center an element like a container, use the auto margin to make it equal on both sides. <code>.container {margin-left:auto; margin-right:auto;}</code> or just <code>.container {margin:auto;}</code></li>
+</ul>
+
+<!-- Navbar -->
+<h3 id="navbar" class="adjust-anchor">Navigation Bar</h3>
+<ul>
+	<li>Create a horizontal nav bar by creating a list of hyperlinks in an unordered list put inline, styled to remove the underlines and bullet points.</li>
+	<li>Create a div for the nav bar or use the HTML5 nav tags. Assign it to one or more classes to do the styling. <code>&lt;div class="navbar">put your nav bar stuff here&lt;/div></code></li>
+</ul>
+<p>	Mandatory styling includes:</p>
+<ul>
+	<li>Set the navbar's background color and height. <code>.navbar {min-height: 40px; background: #black;}</code></li>
+	<li>Display the navbar links as an inline block <code>.navbar li {display: inline-block;}</code></li>
+	<li>Remove the underline from the links and change the text color. <code>.navbar li a {text-decoration: none; color:white}</code></li>
+	<li>Remove the bullets from the unordered list. <code>.navbar {list-style-type: none;}</code></li>
+	<li>You will also need to set the appropriate margin and padding lengths and may need to adjust the relative positioning. </li>
+</ul>
+
+<!-- Attribute Selectors -->
+<h3 id="attribute-selectors" class="adjust-anchor">Attribute Selectors  </h3><ul>
+	<li>Used to style HTML elements that have specific attributes, not just class and id. Often used with forms.</li>
+	<li>use square brackets [] around the attribute. Ex: <code>input[type="submit"] {cursor: pointer;}</code></li>
+</ul>
+
+<!-- Misc -->
+<h3 id="misc" class="adjust-anchor">Misc</h3><ul>
+<li>You can make an element invisible but still have it take up the space. <code>.hide {visibility:hidden;}</code></li>
+<li>Or you can make the element disappear and not take up the space <code>.hide {display:none;}</code></li>
+<li>Use &lt;center> &lt;/center> tags to have everything between them be centered. Like for an image in a carousel.</li>
+</ul>
+
+</div> <!-- /.well -->
+
+			</div> <!--/.span9 -->
+		
+			<!-- SIDEBAR -->
+			<div class='span3'>
+				<ul class="nav nav-tabs nav-stacked">
+					<li><a href='#styling-methods'><i class="icon-chevron-left"></i> Styling Methods</a></li>
+					<li><a href='#terminology'><i class="icon-chevron-left"></i> Terminology</a></li>
+					<li><a href='#syntax'><i class="icon-chevron-left"></i> Syntax</a></li>
+					<li><a href='#tips-tricks'><i class="icon-chevron-left"></i> Tips and Tricks</a></li>
+					<li><a href='#colors'><i class="icon-chevron-left"></i> Colors</a></li>
+					<li><a href='#backgrounds'><i class="icon-chevron-left"></i> Backgrounds</a></li>
+					<li><a href='#measurement-units'><i class="icon-chevron-left"></i> Measurement Units</a></li>
+					<li><a href='#text'><i class="icon-chevron-left"></i> Text</a></li>
+					<li><a href='#ids'><i class="icon-chevron-left"></i> IDs</a></li>
+					<li><a href='#classes'><i class="icon-chevron-left"></i> Classes</a></li>
+					<li><a href='#links'><i class="icon-chevron-left"></i> Links</a></li>
+					<li><a href='#lists'><i class="icon-chevron-left"></i> Lists</a></li>
+					<li><a href='#tables'><i class="icon-chevron-left"></i> Tables</a></li>
+					<li><a href='#box-model'><i class="icon-chevron-left"></i> Box Model</a></li>
+					<li><a href='#dimensions'><i class="icon-chevron-left"></i> Dimensions</a></li>
+					<li><a href='#images'><i class="icon-chevron-left"></i> Images</a></li>
+					<li><a href='#positioning'><i class="icon-chevron-left"></i> Positioning</a></li>
+					<li><a href='#cursor'><i class="icon-chevron-left"></i> Cursor</a></li>
+					<li><a href='#overflow'><i class="icon-chevron-left"></i> Overflow</a></li>
+					<li><a href='#float'><i class="icon-chevron-left"></i> Float</a></li>
+					<li><a href='#h-align'><i class="icon-chevron-left"></i> Horizontal Alignment</a></li>
+					<li><a href='#navbar'><i class="icon-chevron-left"></i> Navbar</a></li>
+					<li><a href='#attribute-selectors'><i class="icon-chevron-left"></i> Attribute Selectors</a></li>
+					<li><a href='#misc'><i class="icon-chevron-left"></i> Misc</a></li>
+				</ul>
+			</div> <!--/.span3 -->
+		</div> <!-- /.row -->
+
+		<hr/>
+		<footer class="span9">
+			<center>Bootstrap, HTML, CSS Starter Kit | Posted by <a href="http://techandstartup.com">TechandStartup.com</a></center>
+		</footer>
+
+</div>  <!-- /container -->
+
+<!-- Javascript is at the end for faster page loading -->
+  <script src="js/jQuery-2.0.3.js"></script>
+  <script src="../bootstrap/js/bootstrap.min.js"></script>
+  <!-- Or link to the js files hosted on a content delivery network
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>	-->
+</body>
+</html> 
+            

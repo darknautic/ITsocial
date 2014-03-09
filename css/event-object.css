@@ -4,7 +4,7 @@
     position: relative;
     margin-top:7px;
     margin-bottom:3px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     
     border-bottom: solid;
     border-bottom-color: #808080;
@@ -24,14 +24,24 @@
 }
 
 
+.eventObject > span {
+    
+    font-size: 12px;
+    
+}
 
 .updateEventBox{
     position: relative;
     margin-top: 7px;
-    min-height: 10px;
+    min-height: 8px;
     border-color: #C4C4C4;
     border-style: solid;
     border-width: 1px;
+    height: 100%;    
+    width: 100%;
+    cursor: text;    
+    vertical-align: middle;
+    
     
     padding-bottom: 7px;
     padding-top: 7px;
@@ -44,8 +54,41 @@
     font-size: 12px;
     -moz-border-radius: 7px;
     border-radius: 7px;
-
+    outline: 0px solid transparent;
+        
 }
+
+/*
+.updateEventBox:focus{
+        
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    border: 0px solid transparent;
+    outline: 1px solid #0066FF;    
+    
+}*/
+
+.updateEventBox:focus{
+        
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    /*border: 2px solid #0066FF;*/
+    border: 2px solid #3385FF;
+    outline: 0px solid transparent;    
+    
+}
+
+
+/*
+.updateEventBox > .focus > div,
+.updateEventBox > .focus > div:hover {
+  color: #ffffff;
+  background-color: green;
+}
+*/
+
+/**span7 > div {}*/
+
 
 
 div[data-placeholder]:not(:focus):not([data-div-placeholder-content]):before {
@@ -54,13 +97,10 @@ div[data-placeholder]:not(:focus):not([data-div-placeholder-content]):before {
     margin-left: 7px;
     color: #b3b3b3;
     font-size: 14px;
-    /*text-align: center;
-    vertical-align: middle;
-    line-height: 12px; */ /* the same as your div height */
+    /*text-align: center;*/
+    vertical-align: middle;  
+    line-height: 12px;  /* the same as your div height */ 
 }
-/*
-div.scrollbars {
-    max-height: 100px;
-    overflow: auto;
-}
-*/
+
+
+

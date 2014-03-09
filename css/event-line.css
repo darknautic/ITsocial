@@ -4,11 +4,26 @@ body{
 
 .timeLine{
     border-color: #001122;
-    /*height: 100%;*/ height: auto;
-    width: 430px;
+    /*height: 100%;*/
+    height: auto;
+    /*width: 430px;*/
     /*position: fixed;  */
     top: 70px;
     left: 100px;
     border-style: none;
     background-color: white;
+}
+
+
+#eventContent{
+    
+ border: 1px solid #0000FF;
+ position: fixed;
+ width: 100%;
+ top : 100px; 
+ height: 40px;
+
+    
+    
+    
 }
