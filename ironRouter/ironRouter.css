@@ -1,0 +1,114 @@
+/* CSS declarations go here */
+body{
+   background-color:white;
+   font-family: "PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif; 
+   }
+
+
+#theTop {
+   
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   height: 70px;
+   width: 100%;
+   background: #0066FF;
+   /*border-bottom: 1px solid #000;*/
+   z-index:99999;
+   /*border: 1px solid #000000;*/
+   
+   background-image: -moz-linear-gradient(top, #0066FF, #3366FF);
+   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0066FF), to(#3366FF));
+   background-image: -webkit-linear-gradient(top, #0066FF, #3366FF);
+   background-image: -o-linear-gradient(top, #0066FF, #3366FF);
+   background-image: linear-gradient(to bottom, #0066FF, #3366FF);
+   background-repeat: repeat-x;
+   border-color: #252525;
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0066FF', endColorstr='#ff3366FF', GradientType=0);
+   }
+   
+/*
+#theTop a{  	
+	color: white;  
+	text-decoration: none;
+	left:400px;
+}
+*/
+
+
+#theTopsignIN {
+
+   position: absolute;
+   top: 77px;
+   right: 0px;
+   height: 10px;
+   width: 20%;
+   padding: 7px 14px 2px;  
+   }
+
+
+  
+#loginBox{
+   
+   /*border: 2px dashed black;   */
+   position:absolute;
+   width:50%;
+   height:48.5%;
+   left : 25%;
+   bottom: 25%;
+			
+									
+   /*background-image: linear-gradient(left , #40A9CF 29%, #AEC2D4 70%);
+   background-image: -o-linear-gradient(left , #40A9CF 29%, #AEC2D4 70%);
+   background-image: -moz-linear-gradient(left , #40A9CF 29%, #AEC2D4 70%);
+   background-image: -webkit-linear-gradient(left , #40A9CF 29%, #AEC2D4 70%);
+   background-image: -ms-linear-gradient(left , #40A9CF 29%, #AEC2D4 70%);
+   */
+   /*
+   background-image: -webkit-gradient(
+           linear,
+           left bottom,
+           right bottom,
+           color-stop(0.29, #40A9CF),
+           color-stop(0.7, #AEC2D4)
+         );*/
+		
+   }
+	
+
+#loginBox2 {
+	
+   position:absolute;
+   width: 40%;
+   height:65%;
+   left : 30%;
+   bottom: 15%;
+   /*border: 2px dashed black;*/
+   }
+   
+#auxLinks {
+   position: absolute;
+   top : 75%;
+   left : 10%;
+   width: 80%;
+   height: 20%;
+   text-align: center;
+   cursor: pointer;
+   /*border: 2px dashed black;*/
+   }
+	
+        
+#signIn{   
+   position: relative;
+   top : 5px;
+   left: 5%;   
+   width: 90%;
+   }
+   
+#signUp{   
+   position: relative;
+   top : 5px;
+   left: 5%;   
+   width: 90%;
+   }
+   

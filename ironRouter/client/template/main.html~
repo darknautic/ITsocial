@@ -1,0 +1,16 @@
+<head>
+  <title>IronRouter</title>
+</head>
+
+
+<template name="main">
+  <div class="container">
+    <b>Main Content</b>
+
+    <nav>
+      <a href="{{ pathFor 'about' }}">About</a>
+    </nav>
+    
+  </div>
+</template>
+

@@ -1,0 +1,69 @@
+<head>
+  <title>IronRouter</title>
+</head>
+
+
+
+<template name="about">
+  <div class="container">
+
+    <b>About</b>
+    <nav>
+      <a href="{{ pathFor 'main' }}">home</a>
+    </nav>
+    
+  </div>
+</template>
+
+
+<template name="notFound">
+  <div class="container">
+       <b>Not Found !¡</b>  
+  </div>
+</template>
+
+
+
+<template name="main">
+  <div class="container">
+
+    <b>Main Content</b>
+    <nav>
+      <a href="{{ pathFor 'about' }}">About</a>
+      <a href="{{ pathFor 'login' }}">Login</a>
+    </nav>
+  <br><br>
+
+
+<a href="#" style="color: #000000" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#000000'">
+    Link 1</a>
+<br />
+<br />
+<a href="#" style="color: #999999" onmouseover="this.style.color='#008000'" onmouseout="this.style.color='#999999'">
+    Link 2</a>
+<br />
+<br />
+<a href="#" style="background-color: #113377" onmouseover="this.style.backgroundColor='#008000';this.style.color='#000000'" onmouseout="this.style.backgroundColor='#773311'" >
+    Link 3</a>
+<br />
+
+
+
+  </div>  
+</template>
+
+
+
+<template name="login">
+  <div class="container">
+
+     <form id="loginForm"class="navbar-form pull-right" action="/">      
+          <input id="emailBox" class="span3" type="text" placeholder="Email" autofocus='autofocus'>
+          <input id="passwdBox"  class="span3" type="password" placeholder="Password" >          
+          <input id="signIn" type="submit" class="btn btn-info" value="Sign In">
+      </form>
+      
+      
+
+  </div>  
+</template>

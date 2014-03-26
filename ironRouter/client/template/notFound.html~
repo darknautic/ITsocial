@@ -1,0 +1,13 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="darkNautic" />
+  <title>notFound</title>    
+</head>
+
+
+<template name="notFound">
+  <div class="container">
+       <b>Not Found !¡</b>  
+  </div>
+</template>
+

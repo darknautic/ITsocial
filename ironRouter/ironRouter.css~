@@ -1,0 +1,36 @@
+/* CSS declarations go here */
+
+#whois-li{
+  background-color:#000000;
+/*   text-decoration:none;*/
+}
+
+#whois-li:hover{
+  background-color:#000000;
+}
+
+
+
+#whois-ul:focus{
+  background-color:#000000;
+}
+
+
+#whois-ul:hover{
+  background-color:#000000;
+}
+
+
+
+#whois-li:focus{
+  background-color:#000000;
+}
+
+#whois:hover{
+  background-color:#000000;
+}
+
+
+#whois:focus{
+  background-color:#000000;
+}

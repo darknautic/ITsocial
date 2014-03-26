@@ -1,0 +1,91 @@
+<head>
+  <title>itsm</title>
+</head>
+
+<body>
+
+
+<div class="container">
+  
+  <input id="newTicket" type="button" value="newTicket" /> 
+  <!---popup--------->
+  <div id="popup" style="display: none;">
+    <div class="content-popup">
+        <div class="close"><a href="#" id="close"><i class="icon-remove"></i></a></div>
+        <div>
+            <h2>New Ticket</h2>
+            {{> newTicket}}  
+        </div>
+    </div>
+  </div>
+  
+  <!---List of tickets--------->
+  
+  <div class="bs-example">
+    <form class="navbar-form navbar-left" role="search">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>      
+    </form>
+  </div>
+
+
+  
+  
+  {{> tickets}}
+  
+  
+</div>
+
+</body>
+
+
+
+
+
+
+<template name="newTicket">  
+  <input id="sdId" type="text" placeholder="Id"/>
+  <input id="sdCustomer" type="text"  placeholder="Customer"/>
+  <input id="sdStatus" type="text" placeholder="Status"/>  
+  <input id="sdCategory" type="text" placeholder="Category"/>
+  <input id="sdSubCategory" type="text" placeholder="Subcategory"/>
+  <input id="sdOperator" type="text" placeholder="Operator"/>
+  <input id="sdItems" type="text" placeholder="Configuration Items"/>
+  
+  <br>
+  <a  href="#" class="save btn btn-success btn-small">
+    <i class="icon-ok icon-white"></i>
+  </a>
+  
+</template>
+
+
+
+
+
+<template name="tickets">
+
+<table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Customer</th>
+          <th>Status</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+      <tbody>
+      {{#each listof}}
+        <tr>
+          <td>{{id}}</td>
+          <td>{{customer}}</td>
+          <td>{{status}}</td>
+          <td>{{category}}</td>
+        </tr>    
+      {{/each}}
+      </tbody>    
+</table>
+  
+  
+</template>

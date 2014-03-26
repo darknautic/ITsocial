@@ -1,0 +1,67 @@
+//Router.before(mustBeSignedIn, {except: ['login', 'signup', 'forgotPassword']});
+
+Router.configure({
+  layoutTemplate: 'layout'
+});
+
+
+Router.map(function() {
+  this.route('main', {
+                  path: '/',
+                  template : 'main' 
+                  });
+
+  this.route('about');
+  
+  this.route('login',{
+                  path : '/login',
+                  unload: function () {
+                    // This is called when you navigate to a new route
+                    Session.set('loggedUser', null);
+                   }
+
+  });
+  
+  this.route('notFound', {
+                 path: '*'
+                });
+})
+
+
+
+if (Meteor.isClient) {
+
+  Template.login.events({
+  
+    'submit' : function(){
+
+      Session.set('loggedUser',"s47id");
+      alert('submit login');
+    }
+
+
+  });
+  
+  Template.layout.events({
+  
+    'click a#bye' : function(){
+      alert('bye logout');
+      delete Session.keys['loggedUser'];
+      //Session.set('loggedUser', null);
+    }
+
+
+  });
+  
+    Template.layout.loggedUser = function(){
+  
+      var whois = Session.get('loggedUser');
+      return whois;
+    }
+  
+
+}
+
+
+
+
