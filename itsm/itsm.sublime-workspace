@@ -1,0 +1,380 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"user",
+				"user"
+			],
+			[
+				"Us",
+				"userId"
+			],
+			[
+				"tic",
+				"ticketID"
+			],
+			[
+				"on",
+				"onclick	Attr"
+			],
+			[
+				"ser",
+				"serviceDesk"
+			],
+			[
+				"customer",
+				"customers"
+			],
+			[
+				"c",
+				"console"
+			],
+			[
+				"logged",
+				"loggedUser"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"logge",
+				"loggedUser"
+			],
+			[
+				"Log",
+				"login"
+			],
+			[
+				"email",
+				"emails"
+			],
+			[
+				"fon",
+				"font-style"
+			],
+			[
+				"u",
+				"user"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "itsm.js",
+			"settings":
+			{
+				"buffer_size": 2405,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ironRouter.js",
+			"settings":
+			{
+				"buffer_size": 6795,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "itsm.html",
+			"settings":
+			{
+				"buffer_size": 6467,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 153.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/s47id/projects/ITsocial/itsm/client/auxFunctions.js",
+		"/home/s47id/projects/ITsocial/itsm/ironRouter.js",
+		"/home/s47id/projects/ITsocial/itsm/client/template/main.html",
+		"/home/s47id/projects/ITsocial/itsm/server/server.js",
+		"/home/s47id/projects/ITsocial/itsm/client/template/login.html",
+		"/home/s47id/projects/ITsocial/itsm/itsm.js",
+		"/home/s47id/projects/ITsocial/itsm/itsm.css",
+		"/home/s47id/projects/ITsocial/itsm/itsm.html",
+		"/home/s47id/projects/ITsocial/itsm/client/template/signUp.html",
+		"/var/www/html/ITsocial/incidentForm.html",
+		"/var/www/html/ITsocial/css/event-object.css",
+		"/var/www/html/ITsocial/css/event-line.css",
+		"/var/www/html/ITsocial/js/event-object.js",
+		"/var/www/html/ITsocial/event-object_v1.html",
+		"/home/s47id/projects/ITsocial/itsm/ironRouter.css",
+		"/home/s47id/projects/ITsocial/itsm/ironRouter.html",
+		"/home/s47id/projects/ITsocial/itsm/server/model.js",
+		"/home/s47id/projects/ITsocial/itsm/packages/.gitignore",
+		"/home/s47id/Notes/link style in line on hover",
+		"/home/s47id/projects/meteorAccounts/devNotes.txt",
+		"/home/s47id/projects/appZ/notes.txt",
+		"/home/s47id/projects/lha-spareparts/Notes.txt",
+		"/home/s47id/projects/ITsocial/DBNotes.txt",
+		"/home/s47id/projects/appZ/appZ.js",
+		"/home/s47id/projects/meteorAccounts/client/accounts.html",
+		"/home/s47id/projects/meteorAccounts/client/templates/signUp.html",
+		"/home/s47id/projects/meteorAccounts/client/templates/not_found.html",
+		"/home/s47id/projects/meteorAccounts/client/templates/main.html",
+		"/home/s47id/projects/meteorAccounts/client/templates/login.html",
+		"/home/s47id/projects/meteorAccounts/client/accounts.js",
+		"/home/s47id/projects/meteorAccounts/client/accounts.css",
+		"/home/s47id/projects/appZ/appZ.html",
+		"/home/s47id/projects/meteor/packages/accounts-password/password_client.js",
+		"/home/s47id/projects/appZ/appZ.css",
+		"/home/s47id/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/s47id/projects/meteor/packages/accounts-password/password_tests.js",
+		"/home/s47id/projects/meteor/packages/accounts-base/accounts_client.js",
+		"/home/s47id/projects/meteor/LICENSE.txt",
+		"/home/s47id/projects/appZ/.meteor/local/build/programs/client/packages/accounts-base.js.map",
+		"/home/s47id/projects/appZ/.meteor/local/build/programs/client/packages/accounts-base.js",
+		"/home/s47id/projects/app/client/login.html",
+		"/home/s47id/projects/app/app.js",
+		"/home/s47id/projects/app/app.html",
+		"/home/s47id/projects/app/smart.json",
+		"/home/s47id/projects/meteorAccounts/.meteor/local/build/programs/client/packages/accounts-ui.js",
+		"/home/s47id/projects/meteorAccounts/.meteor/local/build/programs/server/packages/accounts-ui.js.map",
+		"/home/s47id/projects/meteorAccounts/.meteor/local/build/programs/server/packages/accounts-ui.js",
+		"/home/s47id/projects/meteorAccounts/server/accounts.js",
+		"/home/s47id/soft/sublime_text_3/Packages/Default.sublime-package"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"close",
+			"loginWithPassword"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "itsm.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2405,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "ironRouter.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6795,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "itsm.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6467,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "itsm.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/projects/ITsocial/ironRouter/ironRouter.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 169.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

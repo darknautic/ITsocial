@@ -1,91 +1,235 @@
 <head>
-  <title>itsm</title>
+  <title>ITSM</title>
 </head>
 
-<body>
 
+<!--******* Service Desk  *****************-->
+<template name="serviceDesk">
+  <div class="container">  
+    <input id="newTicket" type="button" value="New Ticket" /> 
 
-<div class="container">
-  
-  <input id="newTicket" type="button" value="newTicket" /> 
-  <!---popup--------->
-  <div id="popup" style="display: none;">
-    <div class="content-popup">
-        <div class="close"><a href="#" id="close"><i class="icon-remove"></i></a></div>
-        <div>
-            <h2>New Ticket</h2>
-            {{> newTicket}}  
-        </div>
+    <!-- ** popup ** -->    
+    <div id="popup" style="display: none; " data-role="popup">
+      <div class="content-popup">
+          <div class="close">
+            <a id="close" href="#" class="btn btn-inverse btn-small">
+              <strong>Close</strong><i class="icon-remove "></i>
+            </a>
+          </div>
+          <div>
+              <h2>New Ticket</h2>
+              {{> newTicket}}  
+          </div>
+      </div>
     </div>
+    
+    <!-- ** List of tickets ** -->
+    <div class="bs-example">
+      <form class="navbar-form navbar-left" role="search">
+        <!-- <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>       -->
+      </form>
+    </div>
+    
+    {{> tickets}}
+     
+    
   </div>
-  
-  <!---List of tickets--------->
-  
-  <div class="bs-example">
-    <form class="navbar-form navbar-left" role="search">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search">
-      </div>      
-    </form>
+</template>
+
+
+<!--******* Service Desk  : Anlyst pool *****************-->
+<template name="serviceDeskPool">
+  <div class="container">  
+    <input id="newTicket" type="button" value="New Ticket" /> 
+
+    <!-- ** popup ** -->    
+    <div id="popup" style="display: none; " data-role="popup">
+      <div class="content-popup">
+          <div class="close">
+            <a id="close" href="#" class="btn btn-inverse btn-small">
+              <strong>Close</strong><i class="icon-remove "></i>
+            </a>
+          </div>
+          <div>
+              <h2>New Ticket</h2>
+              {{> newTicket}}  
+          </div>
+      </div>
+    </div>
+    
+    <!-- ** List of tickets ** -->
+    <div class="bs-example">
+      <form class="navbar-form navbar-left" role="search">
+        <!-- <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>       -->
+      </form>
+    </div>
+    
+    
+    {{> analystPool}}   
+    
   </div>
-
-
-  
-  
-  {{> tickets}}
-  
-  
-</div>
-
-</body>
+</template>
 
 
 
 
 
-
+<!--******* New Ticket  *****************-->
 <template name="newTicket">  
-  <input id="sdId" type="text" placeholder="Id"/>
-  <input id="sdCustomer" type="text"  placeholder="Customer"/>
-  <input id="sdStatus" type="text" placeholder="Status"/>  
-  <input id="sdCategory" type="text" placeholder="Category"/>
-  <input id="sdSubCategory" type="text" placeholder="Subcategory"/>
-  <input id="sdOperator" type="text" placeholder="Operator"/>
-  <input id="sdItems" type="text" placeholder="Configuration Items"/>
-  
-  <br>
-  <a  href="#" class="save btn btn-success btn-small">
-    <i class="icon-ok icon-white"></i>
-  </a>
-  
+  <form role="form">
+    
+    <div class="form-group">  
+      <input id="sdTitle" type="text" class="form-control" placeholder="Title" autofocus='autofocus'>
+    </div>
+
+    <div class="form-group">
+      <span>brief description.</span>
+      <div id="sdDescription" class="updateEventBox" contenteditable></div></div>
+    
+    <div class="form-group">
+      <span>requestor details.</span>
+      <input id="sdRequestor" type="text" class="form-control"  placeholder="Requestor Name"/>
+      <input id="sdItems" type="text" class="form-control" placeholder="Configuration Items"/>
+    </div>
+    
+<!--     <div class="form-group">
+      <input id="sdStatus" type="text" placeholder="Status"/></div> -->
+    
+    <div class="form-group">
+      <span>classification</span>
+      <input id="sdCategory" type="text" class="form-control" placeholder="Category" list="sdCategories"/>
+      <input id="sdSubCategory" type="text" class="form-control" placeholder="Subcategory" list="sdSubCategories"/>
+
+      <datalist id="sdCategories">
+        <option value="Hardware"></option>
+        <option value="Software"></option>
+        <option value="Server"></option>
+        <option value="Client"></option>
+      </datalist>
+
+      <datalist id="sdSubCategories">
+        <option value="Printer"></option>
+        <option value="Workstation"></option>
+        <option value="Disk"></option>      
+        <option value="Memory"></option>
+        <option value="OS : Linux"></option>
+        <option value="OS : Windows"></option>
+        <option value="CRM"></option>
+        <option value="Email"></option>
+        <option value="SQL Server"></option>
+      </datalist>
+
+    </div>
+
+    <div class="form-group">
+      <span>defined handler ?</span>
+      <input id="sdAnalyst" type="text" class="form-control" placeholder="Analyst Name"/>      
+    </div>
+        
+    <br>
+    <a  href="#" class="save btn btn-primary btn-large">
+      <i class="icon-ok icon-white">Open</i>
+    </a>
+  </form>  
 </template>
 
 
 
 
-
+<!--******* List of Tickets  *****************-->
 <template name="tickets">
-
-<table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Id</th>
-          <th>Customer</th>
-          <th>Status</th>
-          <th>Category</th>
-        </tr>
-      </thead>
-      <tbody>
-      {{#each listof}}
-        <tr>
-          <td>{{id}}</td>
-          <td>{{customer}}</td>
-          <td>{{status}}</td>
-          <td>{{category}}</td>
-        </tr>    
-      {{/each}}
-      </tbody>    
-</table>
-  
-  
+  <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Description</th>            
+            <th>Status</th>
+            <th>Analyst</th>
+          </tr>
+        </thead>
+        <tbody>
+        {{#each listof}}
+          <tr>
+            <td><a id={{_id}} class="ticketLink">{{_id}}</a></td>
+            <td>{{title}}</td>
+            <td>{{description}}</td>            
+            <td>{{status}}</td>
+            <td>{{analyst}}</td>
+          </tr>    
+        {{/each}}
+        </tbody>    
+  </table>    
 </template>
+
+
+<!--*******Service Desk :   Analyst Pool  *****************-->
+<template name="analystPool">
+  <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>SubCategory</th>
+            <th>Analyst</th>
+            <th>Status</th>
+            <th>Date</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+        {{#each listof}}
+          <tr>
+            <td><a id="ticketID" class="ticketLink">{{_id}}</a></td>
+            <td>{{title}}</td>
+            <td>{{category}}</td>
+            <td>{{subcategory}}</td>            
+            <td>{{analyst}}</td>            
+            <td>{{status}}</td>
+            <td>{{openDate}}</td>
+            <td>
+                <span title="write a comment" class="glyphicon glyphicon-comment"></span>                   
+                <span title="transfer" class="glyphicon glyphicon-hand-right"></span>           
+                <span title="work on it" class="glyphicon glyphicon-star"></span>  
+        <!-- tooltip on link -->
+        <!-- <a href="#" title="This is some information for our tooltip."><span title="More">CSS3 Tooltip</span></a> -->               
+            </td>
+          </tr>    
+        {{/each}}
+        </tbody>    
+  </table>
+
+
+
+</template>
+
+
+
+
+<!--******* About Template  *****************-->
+<template name="about">
+  <div class="container">
+
+    <b>About</b>
+    <nav>
+      <a href="{{ pathFor 'main' }}">home</a>
+    </nav>
+    
+  </div>
+</template>
+
+
+
+<!--******* Not Found  *****************-->
+<template name="notFound">
+  <div class="container">
+       <b>Not Found !¡</b>  
+  </div>
+</template>
+
+

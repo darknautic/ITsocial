@@ -6,5 +6,8 @@
 standard-app-packages
 autopublish
 insecure
-preserve-inputs
-bootstrap
+moment
+iron-router
+accounts-base
+accounts-password
+bootstrap-3

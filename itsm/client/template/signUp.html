@@ -32,6 +32,16 @@
             <input id="passwd2Box" type="password" class="form-control" placeholder="Confirm Password">  
           </div>
           <div class="form-group">
+            <input id="role" type="text" class="form-control" placeholder="Role" list="roles"/>
+            <datalist id="roles">
+              <option value="Analyst"></option>
+              <option value="Operator"></option>
+              <option value="Incident  Owne"></option>
+              <option value="Incident  Manager"></option>
+              <option value="End User"></option>
+            </datalist>
+          </div>
+          <div class="form-group">
             <button id="signUp" type="submit" class="btn btn-info">Sign Up</button>
           </div>
           
