@@ -1,4 +1,5 @@
 serviceDesk = new Meteor.Collection("serviceDesk");
+circles = new Meteor.Collection("userCircles");
 
 
 if (Meteor.isClient) {
@@ -32,6 +33,37 @@ if (Meteor.isClient) {
   });
 
 
+
+  Template.serviceDeskPool.events({
+    'click input#newTicket' : function () {
+      console.log('click botton new');
+      $('#popup').fadeIn('slow');
+      $('.popup-overlay').fadeIn('slow');
+      $('.popup-overlay').height($(window).height());
+      
+    },
+
+    'click a#close' : function () {
+      console.log('click botton close');
+        $('#popup').fadeOut('slow');
+        $('.popup-overlay').fadeOut('slow');
+    }
+    
+  });
+
+
+  Template.serviceDesk.role = function(){
+    // return circles.find({'id' : Meteor.userId()},{});
+    //console.log(circles.find({}).fetch());    
+    //console.log(Meteor.users.find().fetch());
+    //console.log(circles.find({'userId' : 'sajid@nautic.com'},{role : true}).fetch()[0].role[0]);
+    return circles.find({'userId' : Meteor.userId()},{role : true}).fetch()[0].role[0];
+    
+  };
+
+  Template.serviceDeskPool.role = function(){  
+    return circles.find({'userId' : Meteor.userId()},{role : true}).fetch()[0].role[0];    
+  };
 
 
   Template.newTicket.events({
@@ -76,9 +108,17 @@ if (Meteor.isClient) {
     }
   });
   
+ 
   Template.tickets.events({
     'click a.ticketLink' : function (e, t){
       console.log(e.target.id);
+    }
+  });
+
+  Template.analystPool.events({
+    'click a.ticketLink' : function (e, t){
+      console.log(e.target.id);
+      Router.go('/sd/'+e.target.id);
     }
   });
 
@@ -94,9 +134,15 @@ if (Meteor.isClient) {
 
 
 
-function getTicketId (a,b){
+  function getTicketId (a,b){
+  }
 
-}
+
+  Template.analystPool.helpers({
+    formatDate : function(date){
+      return moment(date).format("lll");
+    }
+  });
 
 
 

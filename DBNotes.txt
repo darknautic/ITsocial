@@ -38,8 +38,16 @@ db.serviceDesk.find().sort({openDate:-1}).limit(1);
 
 
 // adding Role
-db.users.update({'emails.address': 'a@a'}, {'$push': {'Role': 'Analyst'} });
-db.users.update({'emails.address': 'a@a'}, {'$pull': {'Role': 'SD'} });
+db.users.update({'emails.address': 'a@a'}, {'$push': {'role': 'Analyst'} });
+db.users.update({'emails.address': 'a@a'}, {'$pull': {'role': 'SD'} });
+
+//
+db.userCircles.update({'userId':'a@a'},{'$push': {'role': 'Analyst'} }, {upsert : true});
+db.userCircles.update({'userId':'sajid@nautic.com'},{'$push': {'role': 'Manager'} }, {upsert : true});
+db.userCircles.update({'userId':'XoKk4kawhNxgm8dbr'},{'$push': {'role': 'SD-EndUser'} }, {upsert : true});
+db.userCircles.update({'userId':'9SaRrmedA98QQwqMc'},{'$push': {'role': 'SD-Analyst'} }, {upsert : true});
+
+
 
 
 

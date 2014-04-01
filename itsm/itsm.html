@@ -22,9 +22,11 @@
           </div>
       </div>
     </div>
-    
+ 
+<!-- <br> Role : <span>{{role}}</span> -->
+
     <!-- ** List of tickets ** -->
-    <div class="bs-example">
+    <div class="bs-example"> 
       <form class="navbar-form navbar-left" role="search">
         <!-- <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
@@ -36,6 +38,8 @@
      
     
   </div>
+
+
 </template>
 
 
@@ -58,9 +62,11 @@
           </div>
       </div>
     </div>
-    
+ 
+   <!--  <br> Role : <span>{{role}}</span> -->
+
     <!-- ** List of tickets ** -->
-    <div class="bs-example">
+    <div class="serviceDeskPool"> 
       <form class="navbar-form navbar-left" role="search">
         <!-- <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
@@ -69,7 +75,8 @@
     </div>
     
     
-    {{> analystPool}}   
+    {{> analystPool}}
+
     
   </div>
 </template>
@@ -173,6 +180,7 @@
         <thead>
           <tr>
             <th>Id</th>
+            <th>Requestor</th>
             <th>Title</th>
             <th>Category</th>
             <th>SubCategory</th>
@@ -185,13 +193,14 @@
         <tbody>
         {{#each listof}}
           <tr>
-            <td><a id="ticketID" class="ticketLink">{{_id}}</a></td>
+            <td><a id={{_id}}  class="ticketLink">{{_id}}</a></td>
+            <td>{{requestor}}</td>
             <td>{{title}}</td>
             <td>{{category}}</td>
             <td>{{subcategory}}</td>            
             <td>{{analyst}}</td>            
             <td>{{status}}</td>
-            <td>{{openDate}}</td>
+            <td>{{formatDate openDate}}</td>
             <td>
                 <span title="write a comment" class="glyphicon glyphicon-comment"></span>                   
                 <span title="transfer" class="glyphicon glyphicon-hand-right"></span>           
@@ -233,3 +242,83 @@
 </template>
 
 
+
+
+<template name="SDUpdateTicket">
+
+  <div class="container"> 
+
+    <ol class="breadcrumb">
+      <li><a href="/">Home</a></li>
+      <!-- <li><a href="#">Library</a></li> -->
+      <li class="active">Ticket</li>
+    </ol>
+    
+  <form role="form">
+    <div class="form-group">
+      <div class="row"> 
+        <div class="col-md-2"><strong>Id:</strong><div class="divEditable">{{_id}}</div></div>          
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <strong>Title:</strong><div class="divEditable" contenteditable>{{title}}</div>
+        </div>
+        <div class="col-md-7">
+          <strong>Description:</strong><div class="divEditable" contenteditable>{{description}}</div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-3">
+          <strong>Status:</strong><div class="divEditable" contenteditable>{{status}}</div>
+          <strong>Date:</strong><div class="divEditable">{{openDate}}</div> 
+          <strong>Requestor:</strong><div class="divEditable">{{requestor}}</div>       
+        
+          <strong>Category:</strong><div class="divEditable" contenteditable>{{category}}</div>
+          <strong>SubCategory:</strong><div class="divEditable" contenteditable>{{subcategory}}</div>  
+        </div>
+        <div class="col-md-7">
+          <br><br>
+          <span><strong>Comments.</strong></span>
+
+
+          <div class="timeLine"> 
+            <div class="eventObject">
+              <div class="updateEventBox" contenteditable></div>
+            </div>
+            <div class="eventObject">
+                <span>hello this is an event object , first style sheet for this object ok well 
+                this a update and all comming events will be treated a equal as other comming events from ESB.
+                </span>             
+            </div> <!-- eventObject -->
+            <div class="eventObject">
+                <span>
+                run time evitoment social module will handle all event coming from ESB, 
+                graph database will control waht show to whom and nodeJs will handle all update request to mongodb or cassandra database , elasticsearch will be to handle croos event search or cross groups serach waht ever it sound very nice.
+                </span>             
+            </div> <!-- eventObject -->
+            <div class="eventObject">
+                <span>
+                the IT social module will handle all event coming from ESB, graph database 
+                will ocntrol waht show to whom and nodeJs will handle all update request to 
+                mongodb or cassandra database , elasticsearch will be to handle croos event 
+                serach or cross groups serach waht ever it sound very nice 
+                </span>             
+            </div> <!-- eventObject -->
+          </div> <!-- timeLine -->
+
+        </div>
+      </div>
+      
+      
+      
+    </div>
+  </form>
+    
+    <div class="commentArea"></div>
+
+    
+  </div> <!-- container -->
+
+
+</template> <!-- End SDUpdateTicket -->

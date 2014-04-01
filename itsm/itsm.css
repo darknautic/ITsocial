@@ -183,8 +183,34 @@ body{
 .bs-example:after {
     color: #BBBBBB;
     content: "Your Tickets";
-    font-size: 12px;
-    font-weight: 700;
+    font-size: 14px;
+    /*font-weight: 700;*/
+    font-weight: 1400;
+    left: 15px;
+    letter-spacing: 1px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 15px;
+}
+
+.serviceDeskPool {
+    background-color: #FAFAFA;
+    border-color: #E5E5E5 #EEEEEE #EEEEEE;
+    border-style: solid;
+    border-width: 1px 0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05) inset;
+    /*margin: 0 -15px 15px;*/
+    margin: 21px -15px 15px;
+    padding: 45px 15px 15px;
+    position: relative;
+}
+
+.serviceDeskPool:after {
+    /*color: #BBBBBB;*/
+    color: gray;
+    content: "Tickets";
+    font-size: 14px;    
+    font-weight: 1400;
     left: 15px;
     letter-spacing: 1px;
     position: absolute;
@@ -275,3 +301,66 @@ body{
     position: absolute;
     z-index: 99;
 }*/
+
+
+
+.divEditable{
+  border-bottom: solid;
+  border-color: #4F9FCF transparent;
+  border-width: 1px;
+  width: auto;
+
+}
+
+.divEditable:focus{
+     border-radius: 7px;
+    -moz-border-radius: 7px;
+    /*border: 2px solid #0066FF;*/
+    border: 2px solid #3385FF;
+    outline: 0px solid transparent;    
+    font-size: 17px;
+}
+
+.timeLine{
+    border-color: #001122;
+    /*height: 100%;*/
+    height: auto;
+    /*width: 430px;*/
+    /*position: fixed;  */
+    top: 70px;
+    left: 100px;
+    border-style: none;
+    background-color: white;
+}
+
+
+.eventObject{
+    position: relative;
+    margin-top:7px;
+    margin-bottom:3px;
+    padding-bottom: 40px;
+    
+    border-bottom: solid;
+    border-bottom-color: #808080;
+    border-width: 1px;
+    
+    width:  90%;
+    /*height: auto;*/
+    left: 5%;
+    top: 7px;
+    
+    
+    /*overflow:hidden;*/
+    word-wrap: break-word;    
+    white-space: normal; 
+    /*overflow: auto;
+    max-height: 500px;*/
+}
+
+
+.eventObject > span {
+    
+    font-size: 12px;
+    
+}
+
