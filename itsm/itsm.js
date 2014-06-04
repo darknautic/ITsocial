@@ -127,7 +127,7 @@ if (Meteor.isClient) {
 
   };
   
-  Template.analystPool.listof = function(){
+  Template.analystPool.listof = function(){    
     return serviceDesk.find({},{sort: {'openDate': -1}});
 
   };
@@ -143,6 +143,18 @@ if (Meteor.isClient) {
       return moment(date).format("lll");
     }
   });
+
+
+  Template.sdComments.helpers({
+    formatDate : function(date){
+      return moment(date).format("lll");
+    }
+  });
+
+  Template.SDUpdateTicket.comments = function(id){    
+    //console.log( serviceDesk.find({_id : "zj9cuRLjBQ3tvicTK"},{comments : true});
+    return serviceDesk.find({_id : "zj9cuRLjBQ3tvicTK"},{ comments : true})[0];
+  };
 
 
 

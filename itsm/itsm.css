@@ -317,6 +317,7 @@ body{
     -moz-border-radius: 7px;
     /*border: 2px solid #0066FF;*/
     border: 2px solid #3385FF;
+    padding: 7px 7px 7px 7px;
     outline: 0px solid transparent;    
     font-size: 17px;
 }
@@ -342,6 +343,7 @@ body{
     
     border-bottom: solid;
     border-bottom-color: #808080;
+    /*border-bottom-color: #4F9FCF ;*/
     border-width: 1px;
     
     width:  90%;
@@ -360,7 +362,15 @@ body{
 
 .eventObject > span {
     
-    font-size: 12px;
+    /*font-size: 12px;*/
     
 }
+.eventObject .header > span {
+  color: #4F9FCF;
+  font-size: 12px;
+}
 
+#post{
+  position: relative;
+  top : 14px;
+}

@@ -204,7 +204,7 @@
             <td>
                 <span title="write a comment" class="glyphicon glyphicon-comment"></span>                   
                 <span title="transfer" class="glyphicon glyphicon-hand-right"></span>           
-                <span title="work on it" class="glyphicon glyphicon-star"></span>  
+                <span title="work on it" class="glyphicon glyphicon-ok-sign"></span>  
         <!-- tooltip on link -->
         <!-- <a href="#" title="This is some information for our tooltip."><span title="More">CSS3 Tooltip</span></a> -->               
             </td>
@@ -257,7 +257,7 @@
   <form role="form">
     <div class="form-group">
       <div class="row"> 
-        <div class="col-md-2"><strong>Id:</strong><div class="divEditable">{{_id}}</div></div>          
+        <div class="col-md-2"><strong>Id:</strong><div class="divEditable">{{_id}}</div></div>              
       </div>
       <div class="row">
         <div class="col-md-3">
@@ -270,9 +270,9 @@
       <br>
       <div class="row">
         <div class="col-md-3">
-          <strong>Status:</strong><div class="divEditable" contenteditable>{{status}}</div>
-          <strong>Date:</strong><div class="divEditable">{{openDate}}</div> 
-          <strong>Requestor:</strong><div class="divEditable">{{requestor}}</div>       
+          <strong>Status:</strong><div class="divEditable" contenteditable>{{status}}</div><br>
+          <strong>Date:</strong><div class="divEditable">{{openDate}}</div><br>
+          <strong>Requestor:</strong><div class="divEditable">{{requestor}}</div><br>       
         
           <strong>Category:</strong><div class="divEditable" contenteditable>{{category}}</div>
           <strong>SubCategory:</strong><div class="divEditable" contenteditable>{{subcategory}}</div>  
@@ -283,28 +283,39 @@
 
 
           <div class="timeLine"> 
+            
             <div class="eventObject">
-              <div class="updateEventBox" contenteditable></div>
-            </div>
-            <div class="eventObject">
-                <span>hello this is an event object , first style sheet for this object ok well 
-                this a update and all comming events will be treated a equal as other comming events from ESB.
-                </span>             
+              <div class="row">
+              <form role="form">
+                <div class="updateEventBox" contenteditable ></div>
+                <a id="post" href="#" class="btn  btn-large btn-mini pull-right">
+                  <i class="glyphicon  glyphicon-ok ">post</i> 
+                </a>
+              </form>
+              </div> <!-- row -->
             </div> <!-- eventObject -->
-            <div class="eventObject">
-                <span>
-                run time evitoment social module will handle all event coming from ESB, 
-                graph database will control waht show to whom and nodeJs will handle all update request to mongodb or cassandra database , elasticsearch will be to handle croos event search or cross groups serach waht ever it sound very nice.
-                </span>             
-            </div> <!-- eventObject -->
-            <div class="eventObject">
-                <span>
-                the IT social module will handle all event coming from ESB, graph database 
-                will ocntrol waht show to whom and nodeJs will handle all update request to 
-                mongodb or cassandra database , elasticsearch will be to handle croos event 
-                serach or cross groups serach waht ever it sound very nice 
-                </span>             
-            </div> <!-- eventObject -->
+
+            <span>{{comments}}</span>
+
+              {{#each comments}}
+                <div class="eventObject">
+                    <div >
+                      <div class="pull-left header">
+                        <span><strong><a>{{writer}}</a></strong></span>
+                      </div>
+                      <div class="pull-right header">
+                        <span><strong>{{formatDate postDate}}</strong></span>
+                      </div>                
+                    </div>
+                    <div >
+                      <br>
+                      <span>{{comment}}
+                      </span>
+                    </div>             
+                </div> <!-- eventObject -->
+              {{/each}}
+  
+
           </div> <!-- timeLine -->
 
         </div>
@@ -322,3 +333,12 @@
 
 
 </template> <!-- End SDUpdateTicket -->
+
+
+
+
+
+<template name="sdComments">
+
+
+</template>

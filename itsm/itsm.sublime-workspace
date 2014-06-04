@@ -4,8 +4,108 @@
 		"selected_items":
 		[
 			[
+				"ar",
+				"array"
+			],
+			[
+				"char",
+				"charArray"
+			],
+			[
+				"my",
+				"myByteA"
+			],
+			[
+				"in",
+				"insertAfter"
+			],
+			[
+				"te",
+				"tempGDC"
+			],
+			[
+				"set",
+				"setNextNode"
+			],
+			[
+				"se",
+				"setPreviousNode"
+			],
+			[
+				"get",
+				"getNextNode"
+			],
+			[
+				"Node",
+				"nodeValue"
+			],
+			[
+				"new",
+				"newItem"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"last",
+				"lastItem"
+			],
+			[
+				"pr",
+				"previousItem"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"how",
+				"howMany"
+			],
+			[
+				"spare",
+				"sparePart"
+			],
+			[
+				"manager",
+				"manager-gui"
+			],
+			[
+				"s",
+				"standar"
+			],
+			[
+				"e",
+				"estandar"
+			],
+			[
+				"spa",
+				"sparepart"
+			],
+			[
+				"com",
+				"comment"
+			],
+			[
+				"Da",
+				"Date"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
 				"user",
-				"user"
+				"userId"
+			],
+			[
+				"len",
+				"length"
 			],
 			[
 				"Us",
@@ -52,10 +152,6 @@
 				"emails"
 			],
 			[
-				"fon",
-				"font-style"
-			],
-			[
 				"u",
 				"user"
 			]
@@ -64,26 +160,45 @@
 	"buffers":
 	[
 		{
-			"file": "itsm.js",
+			"contents": "2do\n\n\nInternet Links\n==========================\n\n\nredHat\n-------------------\n\nhttp://mx.redhat.com/training/ways/role.html\nhttp://mx.redhat.com/training/certifications/#certifications\nhttp://mx.redhat.com/training/courses/ex300/\nhttp://mx.redhat.com/training/courses/ex300/examobjective\n\n\n\n------------------\nbites.goodeggs.com/posts/export-this/\nhttp://www.mariocasciaro.me/the-strange-world-of-node-js-design-patterns\n\n\n\nfuzzy\n-------------\nilearnasigoalong.blogspot.mx/2013/10/efficient-techniques-for-fuzzy-and.html\n\n\n\nJava Driver mongo \n-----------------\ndocs.mongodb.org/ecosystem/tutorial/getting-started-with-java-driver/\ndocs.mongodb.org/ecosystem/drivers/java-replica-set-semantics/\ndocs.mongodb.org/ecosystem/tutorial/use-aggregation-framework-with-java-driver/\n\n\n\nfulltext\n------------------\n\nhttp://blog.comsysto.com/2013/06/26/mongo-fulltext-search-vs-regular-expressions/\nhttp://metabroadcast.com/blog/mongodb-full-text-search\nhttp://stackoverflow.com/questions/17473087/how-to-do-full-text-search-on-mongodb-array-fields\nhttp://stackoverflow.com/questions/15879109/how-to-execute-full-text-search-command-in-mongodb-with-java-driver\n\n\n======================\nsambaCircles\nDevelopment of   scripts for monitoring cumulative size of files older than certain  months or  years in  samba file share servers.\n\n\n======================\nminoxidil , menaxteride\n\n\n\n=====================\ngit clean\ngit checkout HEAD^ .gitignore",
 			"settings":
 			{
-				"buffer_size": 2405,
-				"line_ending": "Unix"
+				"buffer_size": 1432,
+				"line_ending": "Unix",
+				"name": "2do"
 			}
 		},
 		{
-			"file": "ironRouter.js",
+			"contents": " db.isMaster().maxBsonObjectSize\n16777216\n\nmongoimport --db pcat --collection products --type json --file products.json\n db.products.find({type:\"case\"}).count()\n3\n\n\ndb.products.find({brand:\"ACME\"})\n\n\nHow would you print out, in the shell, the name of all the products without extraneous characters or braces, sorted alphabetically, ascending? (Check all that would apply.)\n\nok - db.products.find({},{name:1,_id:0}).sort({name:1})\nvar c = db.products.find({},{name:1,_id:0}).sort({name:1}); while( c.hasNext() ) print( c.next().name);\nvar c = db.products.find({}).sort({name:1}); c.forEach( function(doc){ print(doc.name) } );\nvar c = db.products.find({}).sort({name:-1}); while( c.hasNext() ) print( c.next().name);\n\n",
 			"settings":
 			{
-				"buffer_size": 6795,
-				"line_ending": "Unix"
+				"buffer_size": 717,
+				"line_ending": "Unix",
+				"name": "db.isMaster().maxBsonObjectSize"
 			}
 		},
 		{
-			"file": "itsm.html",
+			"contents": "urls\n------------\n\nhttps://developers.google.com/open-source/projects\nhttp://www.sitepoint.com/google-closure-how-not-to-write-javascript/\nhttp://addyosmani.com/resources/essentialjsdesignpatterns/book/\nhttp://www.govloop.com/profiles/blogs/how-to-rock-your-new-leadership-role?elq=92ef004358f240d1abb45de06a249641&elqCampaignId=4613\nhttp://www.govloop.com/profiles/blogs/how-to-rock-your-new-leadership-role?elq=48cd1520733843e0839e80bbdda727bf&elqCampaignId=4613\n \nhttp://docs.mongodb.org/master/MongoDB-indexes-guide.pdf\n\n\n\nlinks and books\n--------------------------------------------------------\n--------------------------------------------------------\n\n+ review some mathematics geometry , numeric methods, crytogrphy, neural networks ,\n desarrolo de binomios a la n (series) , teoria de conjuntos\n     fuzzy logic, definite integral, the derivative, probability theory, random variable,, Stochastic process,\n     data structures\n\n+  common protocols\n+ map reduce ( java )\n+ java certification pdf CBT nuggets\n+ bubble sort (algorithms notebook)\n+ hashtables on java\n+ neural networks\n+ look interviewer knowledge an profile\n \n \nhttp://en.wikipedia.org/wiki/Theoretical_computer_science\n \nhttp://en.wikipedia.org/wiki/Discrete_mathematics\n \nhttp://en.wikipedia.org/wiki/Graph_(mathematics)\n \nhttp://en.wikipedia.org/wiki/Graph_theory\n \nhttp://www.topcoder.com/\n \n \nbooks\n----------------------------------------\n----------------------------------------\n \nhttp://maniali.wikispaces.com/file/view/Programming+Interviews+Exposed.PDF\n \nhttp://www.it.iitb.ac.in/~deepak/deepak/placement/Programming_pearls.pdf\nhttp://www.cs.bell-labs.com/cm/cs/pearls/\n \nftp://doc.nit.ac.ir/cee/jazayeri/Algorithms/Books/Design%20&%20Analysis%20of%20Algorithm.pdf\nhttp://www.uqac.ca/rebaine/8INF806/designeand%20analysis%20of%20algorithms%20by%20litvin.pdf\nhttp://www.csc.villanova.edu/~map/puzzles.pdf\n \n \nhttp://books.google.com.mx/books/about/Make_Easy_Money_with_Google.html?id=VE-zAAAACAAJ&redir_esc=y\n\nhttp://courses.csail.mit.edu/iap/interview/materials.php\n\n\n\npersonality \n--------------------------------\n--------------------------------\n\nhttp://en.wikipedia.org/wiki/Strengths_and_weaknesses_(personality)\n\n\n\n\n\n\n\nAlgorithms and Methods\n---------------------\nSieve of Eratosthenes - (get prime numbers from 2 to n)\nGreedy - ( problem solved heuristic )  minimal number of coins to give while making change\nFord–Fulkerson - (Maximun Flow) f.i  N Employees & M Jobs\nEuclid's algorithm - ( GCD )\nFibonacci  Sequence - ( Fn = Fn-1 + Fn-2  ) F0 = 0 F1 = 1\nFibonacci heap faster than binomial heap\nHeaps (if you need always de max value this data structe is right, f.i  patients waiting in a emergency room  )\n\nstacks - (used when a task is divided into multiple tasks)\n\nhttp://bigocheatsheet.com/\n\n\n\n\nhttp://research.google.com/\nhttp://mathworld.wolfram.com/topics/Geometry.html\nhttp://introcs.cs.princeton.edu/java/stdlib/\nhttp://community.topcoder.com/tc?module=ProblemArchive\nhttp://www.stoimen.com/blog/2012/03/05/computer-algorithms-merge-sort/\nhttp://java67.blogspot.mx/2013/01/difference-between-set-list-and-map-in-java.html\n========================\n\n",
 			"settings":
 			{
-				"buffer_size": 6467,
+				"buffer_size": 3146,
+				"line_ending": "Unix",
+				"name": "urls"
+			}
+		},
+		{
+			"contents": "I chage form last job developer,\n\n1) to be on side of necesities\nif ou werent you probaly realize about a problems beaing customer adminitrator, \npossiblei ai dont know iplement whole solution but i know where kick it in order to work it out and putit to work\n\n2) when a comapny gets biggers has more challenge , and challenge of heaps of alots are one of my passion.\n\n\n\n\n\naddValue\n\n1) if have a list of page of customers\n\n2 ) when  you ae surfing on internet just looking for diferent things \ncommonly there is something that make you move on .\n\n\n3 ) there wuld be a pattern when you reach a customer site, what is the source ? +---->+ market vector\n\n4 ) create that though , persuide to create that pattern on brains\n\n\n\n\n---\n\n brodcast speed and breadth of marketing campaign, get a model according to basic variables\n of given market those varaibles model brodcast \n\n\n\n ---\n\n Along with multitasking came new challenges for software developers. Programs can no longer assume to have all the CPU time available, nor all memory or any other computer resources. A \"good citizen\" program should release all resources it is no longer using, so other programs can use them.\n\nOur cities are getting more processes and threads , one CPU!¡, one City !¡ the jump to multitask required \"Good Citizens\" as well as this world requires.",
+			"settings":
+			{
+				"buffer_size": 1325,
+				"line_ending": "Unix",
+				"name": "I chage form last job developer,"
+			}
+		},
+		{
+			"settings":
+			{
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		}
@@ -115,15 +230,58 @@
 	},
 	"file_history":
 	[
-		"/home/s47id/projects/ITsocial/itsm/client/auxFunctions.js",
+		"/home/s47id/projects/heritance/Node.java",
+		"/home/s47id/projects/heritance/OneChildNode.java",
+		"/home/s47id/projects/firstNonRepeated/FirstNonRepeated.java",
+		"/home/s47id/projects/linkedList-2/Main.java",
+		"/home/s47id/projects/heritance/MotionList.java",
+		"/home/s47id/projects/heritance/MotionLinkedList.java",
+		"/home/s47id/projects/heritance/SinglyNode.java",
+		"/home/s47id/projects/heritance/MList.java",
+		"/home/s47id/projects/heritance/Car.java",
+		"/home/s47id/projects/converts/Main.java",
+		"/home/s47id/projects/linkedList/Node.java",
+		"/home/s47id/projects/linkedList/LinkedList.java",
+		"/home/s47id/projects/linkedList/Main.java",
+		"/home/s47id/projects/euclidGCD/EuclidGCD.java",
+		"/home/s47id/projects/stack/Item.java",
+		"/home/s47id/projects/stack/Stack.java",
+		"/home/s47id/projects/stack/Main.java",
+		"/home/s47id/projects/stack/Node.java",
+		"/home/s47id/EclipseProjects/lhAutomotriz/dbScript_dummyData.js",
+		"/home/s47id/EclipseProjects/lhAutomotriz/notes.js",
+		"/home/s47id/EclipseProjects/lhAutomotriz/todo.txt",
+		"/home/s47id/EclipseProjects/lhAutomotriz/lhAutomotriz/src/com/lhweb/load/model/SparePart.java",
+		"/home/s47id/projects/mongoUniversity/products.json",
+		"/home/s47id/EclipseProjects/lhaWeb/dbScript_dummyData.js",
+		"/home/s47id/EclipseProjects/lhaWeb/notes.js",
+		"/home/s47id/EclipseProjects/lhaWeb/todo.txt",
+		"/home/s47id/projects/lha-spareparts/Notes.txt",
+		"/home/s47id/projects/lha-spareparts/db_dummy_data.js",
+		"/home/s47id/projects/ITsocial/itsm/itsm.css",
+		"/home/s47id/Documents/Fonts.note",
+		"/home/s47id/projects/ITsocial/itsm/client/template/signUp.html",
+		"/home/s47id/soft/apache-tomcat-7.0.53/conf/tomcat-users.xml",
+		"/home/s47id/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/s47id/projects/mongodUp.sh",
+		"/home/s47id/projects/lha-spareparts/Ejemplos.xlsx",
+		"/home/s47id/projects/ITsocial/DBNotes.txt",
+		"/home/s47id/projects/ITsocial/itsm/itsm.html",
 		"/home/s47id/projects/ITsocial/itsm/ironRouter.js",
+		"/home/s47id/projects/ITsocial/itsm/itsm.js",
+		"/run/user/1001/gvfs/sftp:host=codeinmotion.org/index.html",
+		"/home/s47id/projects/add_url_2_google_index.note",
+		"/home/s47id/projects/meteor_links.note",
+		"/home/s47id/projects/ITsocial/itsm/login.js",
+		"/home/s47id/projects/ITsocial/itsm/client/template/mainSD_EndUser.html",
+		"/home/s47id/projects/ITsocial/itsm/client/template/mainSD_Analyst.html",
+		"/home/s47id/projects/ITsocial/itsm/client/js/mainSD_Analyst.js",
+		"/home/s47id/projects/ITsocial/itsm/client/js/mainSD_EndUser.js",
+		"/home/s47id/projects/ITsocial/itsm/.meteor/local/build/programs/ctl/node_modules/npm/lib/view.js",
+		"/home/s47id/projects/ITsocial/itsm/client/auxFunctions.js",
 		"/home/s47id/projects/ITsocial/itsm/client/template/main.html",
 		"/home/s47id/projects/ITsocial/itsm/server/server.js",
 		"/home/s47id/projects/ITsocial/itsm/client/template/login.html",
-		"/home/s47id/projects/ITsocial/itsm/itsm.js",
-		"/home/s47id/projects/ITsocial/itsm/itsm.css",
-		"/home/s47id/projects/ITsocial/itsm/itsm.html",
-		"/home/s47id/projects/ITsocial/itsm/client/template/signUp.html",
 		"/var/www/html/ITsocial/incidentForm.html",
 		"/var/www/html/ITsocial/css/event-object.css",
 		"/var/www/html/ITsocial/css/event-line.css",
@@ -136,8 +294,6 @@
 		"/home/s47id/Notes/link style in line on hover",
 		"/home/s47id/projects/meteorAccounts/devNotes.txt",
 		"/home/s47id/projects/appZ/notes.txt",
-		"/home/s47id/projects/lha-spareparts/Notes.txt",
-		"/home/s47id/projects/ITsocial/DBNotes.txt",
 		"/home/s47id/projects/appZ/appZ.js",
 		"/home/s47id/projects/meteorAccounts/client/accounts.html",
 		"/home/s47id/projects/meteorAccounts/client/templates/signUp.html",
@@ -149,7 +305,6 @@
 		"/home/s47id/projects/appZ/appZ.html",
 		"/home/s47id/projects/meteor/packages/accounts-password/password_client.js",
 		"/home/s47id/projects/appZ/appZ.css",
-		"/home/s47id/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/s47id/projects/meteor/packages/accounts-password/password_tests.js",
 		"/home/s47id/projects/meteor/packages/accounts-base/accounts_client.js",
 		"/home/s47id/projects/meteor/LICENSE.txt",
@@ -167,7 +322,7 @@
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 29.0
 	},
 	"find_in_files":
 	{
@@ -181,6 +336,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"    \n",
+			"font",
+			"system",
+			"model",
+			"barcode",
+			"specialofferprice",
+			"saleprice",
+			"stockmin",
+			"partnumber",
+			"briefdescription",
+			"sparepart",
+			"Provider",
+			"Success",
 			"close",
 			"loginWithPassword"
 		],
@@ -190,6 +358,16 @@
 		"regex": false,
 		"replace_history":
 		[
+			"systems",
+			"compatibility",
+			"barCode",
+			"specialOfferPrice",
+			"salePrice",
+			"stockMin",
+			"partNumber",
+			"briefDescription",
+			"sparePart",
+			"providers"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -200,46 +378,127 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "itsm.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2405,
+						"buffer_size": 1432,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1432,
+								1432
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"auto_name": "2do",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 559.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 717,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								717,
+								717
+							]
+						],
+						"settings":
+						{
+							"auto_name": "db.isMaster().maxBsonObjectSize",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 249.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3146,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2047,
+								2047
+							]
+						],
+						"settings":
+						{
+							"auto_name": "urls",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 863.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1325,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								719,
+								719
+							]
+						],
+						"settings":
+						{
+							"auto_name": "I chage form last job developer,",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 437.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "ironRouter.js",
+					"buffer": 4,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6795,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
@@ -252,9 +511,7 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -262,43 +519,13 @@
 					},
 					"stack_index": 0,
 					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "itsm.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6467,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
 				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 29.0
 	},
 	"input":
 	{
@@ -334,7 +561,7 @@
 	"project": "itsm.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 54.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -372,7 +599,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 169.0,
+	"side_bar_width": 237.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
