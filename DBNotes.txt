@@ -26,7 +26,19 @@ db.serviceDesk.insert({
   subcategory : "Connection",
   title : "",
   description : "",
-  configItems : ["CI0005402312","CI0005402314"]  
+  configItems : ["CI0005402312","CI0005402314"]
+  comments : [
+    {
+      postDate : "",
+      writer : "Tony Stark",
+      comment : "comment comment comment commentcomment comment comment "
+    },
+    {
+      postDate : "",
+      writer : "Montana",
+      comment : "comment comment comment commentcomment comment comment "
+    }
+  ]  
 });
 
 // getting last record inserted
@@ -41,11 +53,21 @@ db.serviceDesk.find().sort({openDate:-1}).limit(1);
 db.users.update({'emails.address': 'a@a'}, {'$push': {'role': 'Analyst'} });
 db.users.update({'emails.address': 'a@a'}, {'$pull': {'role': 'SD'} });
 
-//
+// adding Circles profile roles
 db.userCircles.update({'userId':'a@a'},{'$push': {'role': 'Analyst'} }, {upsert : true});
 db.userCircles.update({'userId':'sajid@nautic.com'},{'$push': {'role': 'Manager'} }, {upsert : true});
 db.userCircles.update({'userId':'XoKk4kawhNxgm8dbr'},{'$push': {'role': 'SD-EndUser'} }, {upsert : true});
 db.userCircles.update({'userId':'9SaRrmedA98QQwqMc'},{'$push': {'role': 'SD-Analyst'} }, {upsert : true});
+
+
+db.serviceDesk.update({'_id':'zj9cuRLjBQ3tvicTK'},
+                {'$push': {'comments': { postDate : new Date(),
+                                        writer : "Nautic",
+                                        comment : "2 zj9cuRLjBQ3tvicTK zj9cuRLjBQ3tvicTK zj9cuRLjBQ3tvicTK"
+                                      }
+                          }
+                }, 
+                {upsert : true});
 
 
 
